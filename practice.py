@@ -342,6 +342,7 @@ print reverse_list(["elote", "carnivore", "scene"])
 
 # print reverse_list_in_place(["hair", "scare", "mare", "hare"])
 #                             # ["hare", "mare", "scare", "hair"]
+# I'm confused about how to write this one as well
 
 # def duplicates(items):
 #     """Return list of words from input list which were duplicates.
@@ -384,6 +385,7 @@ print reverse_list(["elote", "carnivore", "scene"])
 #     return items
 
 # print duplicates(["ginger", 1, "ginger", "taint", 12])
+# I ams the confused about how to write this
 
 # def find_letter_indices(words, letter):
 #     """Return list of indices where letter appears in each word.
@@ -414,10 +416,17 @@ print reverse_list(["elote", "carnivore", "scene"])
 
 #     list_of_indices = []
 #     for i, word in enumerate(words):
-#         for 
+#         letter_count = 0
+#         for j, letter in enumerate(word):
+#             if j == letter:
+#                 letter_count += 1
+#             else:
+#                 letter_count += 0
+#         list_of_indices.append(letter_count)
+#     return list_of_indices
 
-
-#     return []
+# print find_letter_indices(["scraggle", "octopus"], "g")
+# Confused about how to get this one, but I might be close?
 
 # #####################################################################
 # # END OF PRACTICE: You can ignore everything below.
