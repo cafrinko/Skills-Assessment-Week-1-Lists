@@ -5,308 +5,308 @@ you run this file.
 """
 
 
-# def print_list(items):
-#     """Print each item in the input list.
+def print_list(items):
+    """Print each item in the input list.
 
-#     For example::
+    For example::
 
-#         >>> print_list([1, 2, 6, 3, 9])
-#         1
-#         2
-#         6
-#         3
-#         9
-#     """
-#     print [item for item in items]
+        >>> print_list([1, 2, 6, 3, 9])
+        1
+        2
+        6
+        3
+        9
+    """
+    print [item for item in items]
 
-# print_list([1, 2, 6, 3, 9])
-
-
-# def long_words(words):
-#     """Return words in input list that longer than 4 characters.
-
-#     For example::
-
-#         >>> long_words(["hello", "a", "b", "hi", "bacon", "bacon"])
-#         ['hello', 'bacon', 'bacon']
-
-#     (If there are duplicates, show both --- notice "bacon" appears
-#     twice in output)
-
-#     If no words are longer than 4 characters, return an empty list::
-
-#         >>> long_words(["all", "are", "tiny"])
-#         []
-#     """
-
-#     return [word for word in words if len(word) > 4]
-
-# print long_words(["low", "blow", "hoe"])
-# print long_words(["irritable", "secular", "tamer"])
+print_list([1, 2, 6, 3, 9])
 
 
-# def n_long_words(words, n):
-#     """Return words in list longer than `n` characters.
+def long_words(words):
+    """Return words in input list that longer than 4 characters.
 
-#     For example::
+    For example::
 
-#         >>> n_long_words(
-#         ...     ["hello", "hey", "spam", "spam", "bacon", "bacon"],
-#         ...     3
-#         ... )
-#         ['hello', 'spam', 'spam', 'bacon', 'bacon']
+        >>> long_words(["hello", "a", "b", "hi", "bacon", "bacon"])
+        ['hello', 'bacon', 'bacon']
 
-#         >>> n_long_words(["I", "like", "apples", "bananas", "you"], 5)
-#         ['apples', 'bananas']
-#     """
+    (If there are duplicates, show both --- notice "bacon" appears
+    twice in output)
 
-#     return [word for word in words if len(word) > n]
+    If no words are longer than 4 characters, return an empty list::
 
-# print n_long_words(["hulk", "angnemi", "hill", "summit"], 5)
+        >>> long_words(["all", "are", "tiny"])
+        []
+    """
+
+    return [word for word in words if len(word) > 4]
+
+print long_words(["low", "blow", "hoe"])
+print long_words(["irritable", "secular", "tamer"])
 
 
-# def smallest_int(numbers):
-#     """Find the smallest integer in a list of integers and return it.
+def n_long_words(words, n):
+    """Return words in list longer than `n` characters.
 
-#     **DO NOT USE** the built-in function `min()`!
+    For example::
 
-#     For example::
+        >>> n_long_words(
+        ...     ["hello", "hey", "spam", "spam", "bacon", "bacon"],
+        ...     3
+        ... )
+        ['hello', 'spam', 'spam', 'bacon', 'bacon']
 
-#         >>> smallest_int([-5, 2, -5, 7])
-#         -5
+        >>> n_long_words(["I", "like", "apples", "bananas", "you"], 5)
+        ['apples', 'bananas']
+    """
 
-#         >>> smallest_int([3, 7, 2, 8, 4])
-#         2
+    return [word for word in words if len(word) > n]
 
-#     If the input list is empty, return `None`::
+print n_long_words(["hulk", "angnemi", "hill", "summit"], 5)
 
-#         >>> smallest_int([]) is None
-#         True
-#     """
+
+def smallest_int(numbers):
+    """Find the smallest integer in a list of integers and return it.
+
+    **DO NOT USE** the built-in function `min()`!
+
+    For example::
+
+        >>> smallest_int([-5, 2, -5, 7])
+        -5
+
+        >>> smallest_int([3, 7, 2, 8, 4])
+        2
+
+    If the input list is empty, return `None`::
+
+        >>> smallest_int([]) is None
+        True
+    """
     
-#     return sorted(numbers)[0]
+    return sorted(numbers)[0]
 
-# print smallest_int([7, 6, 20, 1])
+print smallest_int([7, 6, 20, 1])
 
 
-# def largest_int(numbers):
-#     """Find the largest integer in a list of integers and return it.
+def largest_int(numbers):
+    """Find the largest integer in a list of integers and return it.
 
-#     **DO NOT USE** the built-in function `max()`!
+    **DO NOT USE** the built-in function `max()`!
 
-#     For example::
+    For example::
 
-#         >>> largest_int([-5, 2, -5, 7])
-#         7
+        >>> largest_int([-5, 2, -5, 7])
+        7
 
-#         >>> largest_int([3, 7, 2, 8, 4])
-#         8
+        >>> largest_int([3, 7, 2, 8, 4])
+        8
 
-#     If the input list is empty, return None::
+    If the input list is empty, return None::
 
-#         >>> largest_int([]) is None
-#         True
-#     """
+        >>> largest_int([]) is None
+        True
+    """
 
-#     return sorted(numbers)[-1]
+    return sorted(numbers)[-1]
 
-# print largest_int([47, 82, 20, -4])
+print largest_int([47, 82, 20, -4])
 
 
-# def halvesies(numbers):
-#     """Return list of numbers from input list, each divided by two.
+def halvesies(numbers):
+    """Return list of numbers from input list, each divided by two.
 
-#     For example::
+    For example::
 
-#         >>> halvesies([2, 6, -2])
-#         [1.0, 3.0, -1.0]
+        >>> halvesies([2, 6, -2])
+        [1.0, 3.0, -1.0]
 
-#     If any of the numbers are odd, make sure you don't round off
-#     the half::
+    If any of the numbers are odd, make sure you don't round off
+    the half::
 
-#         >>> halvesies([1, 5])
-#         [0.5, 2.5]
-#     """
+        >>> halvesies([1, 5])
+        [0.5, 2.5]
+    """
 
-#     return [number/2 for number in numbers]
+    return [number/2 for number in numbers]
 
-# print halvesies([8, 12, 80, 100])
+print halvesies([8, 12, 80, 100])
 
 
-# def word_lengths(words):
-#     """Return the length of words in the input list.
+def word_lengths(words):
+    """Return the length of words in the input list.
 
-#     For example::
+    For example::
 
-#         >>> word_lengths(["hello", "hey", "hello", "spam"])
-#         [5, 3, 5, 4]
-#     """
+        >>> word_lengths(["hello", "hey", "hello", "spam"])
+        [5, 3, 5, 4]
+    """
 
-#     return [len(word) for word in words]
+    return [len(word) for word in words]
 
-# print word_lengths(["howdy", "silverado", "elephantitis"])
+print word_lengths(["howdy", "silverado", "elephantitis"])
 
-# def sum_numbers(numbers):
-#     """Return the sum of all of the numbers in the list.
+def sum_numbers(numbers):
+    """Return the sum of all of the numbers in the list.
 
-#     Python has a built-in function, `sum()`, which already does
-#     this --- but for this exercise, you should not use it.
+    Python has a built-in function, `sum()`, which already does
+    this --- but for this exercise, you should not use it.
 
-#     For example::
+    For example::
 
-#         >>> sum_numbers([1, 2, 3, 10])
-#         16
+        >>> sum_numbers([1, 2, 3, 10])
+        16
 
-#     Any empty list should return the sum of zero::
+    Any empty list should return the sum of zero::
 
-#         >>> sum_numbers([])
-#         0
-#     """
+        >>> sum_numbers([])
+        0
+    """
 
-#     sum = 0
-#     for number in numbers:
-#         sum += number
+    sum = 0
+    for number in numbers:
+        sum += number
 
-#     return sum
+    return sum
 
-# print sum_numbers([8, 16, 24, 88])
+print sum_numbers([8, 16, 24, 88])
 
 
-# def mult_numbers(numbers):
-#     """Return product (result of multiplication) of numbers in list.
+def mult_numbers(numbers):
+    """Return product (result of multiplication) of numbers in list.
 
-#     For example::
+    For example::
 
-#         >>> mult_numbers([1, 2, 3])
-#         6
+        >>> mult_numbers([1, 2, 3])
+        6
 
-#     Obviously, if there is a zero in input, the product is zero::
+    Obviously, if there is a zero in input, the product is zero::
 
-#         >>> mult_numbers([10, 20, 0, 50])
-#         0
+        >>> mult_numbers([10, 20, 0, 50])
+        0
 
-#     As explained at http://en.wikipedia.org/wiki/Empty_product,
-#     if the list is empty, the product should be 1::
+    As explained at http://en.wikipedia.org/wiki/Empty_product,
+    if the list is empty, the product should be 1::
 
-#         >>> mult_numbers([])
-#         1
-#     """
-#     mult = 1
-#     for number in numbers:
-#         mult *= number
+        >>> mult_numbers([])
+        1
+    """
+    mult = 1
+    for number in numbers:
+        mult *= number
 
-#     return mult
+    return mult
 
-# print mult_numbers([5, 9, 2])
+print mult_numbers([5, 9, 2])
 
 
-# def join_strings(words):
-#     """Return a string of all input strings joined together.
+def join_strings(words):
+    """Return a string of all input strings joined together.
 
-#     Python has a built-in method, `list.join()` --- but for
-#     this exercise, **you should not use it**.
+    Python has a built-in method, `list.join()` --- but for
+    this exercise, **you should not use it**.
 
-#     For example::
+    For example::
 
-#         >>> join_strings(["spam", "spam", "bacon", "balloonicorn"])
-#         'spamspambaconballoonicorn'
+        >>> join_strings(["spam", "spam", "bacon", "balloonicorn"])
+        'spamspambaconballoonicorn'
 
-#     For an empty list, you should return an empty string::
+    For an empty list, you should return an empty string::
 
-#         >>> join_strings([])
-#         ''
-#     """
+        >>> join_strings([])
+        ''
+    """
 
-#     string = ""
-#     for word in words:
-#         string += word
+    string = ""
+    for word in words:
+        string += word
 
-#     return string
+    return string
 
-# print join_strings(["saturation", "saturnine", "syncopation"])
+print join_strings(["saturation", "saturnine", "syncopation"])
 
 
-# def average(numbers):
-#     """Return the average (mean) of the list of numbers given.
+def average(numbers):
+    """Return the average (mean) of the list of numbers given.
 
-#     For example::
+    For example::
 
-#         >>> average([2, 4])
-#         3.0
+        >>> average([2, 4])
+        3.0
 
-#     This should handle cases where the result isn't an integer::
+    This should handle cases where the result isn't an integer::
 
-#         >>> average([2, 12, 3])
-#         5.666666666666667
+        >>> average([2, 12, 3])
+        5.666666666666667
 
-#     There is no defined answer if the list given is empty;
-#     it's fine if this raises an error when given an empty list.
+    There is no defined answer if the list given is empty;
+    it's fine if this raises an error when given an empty list.
 
-#     (Think of the best way to handle an empty input list, though,
-#     a feel free to provide a good solution here.)
-#     """
+    (Think of the best way to handle an empty input list, though,
+    a feel free to provide a good solution here.)
+    """
 
-#     return sum(numbers)/len(numbers)
+    return sum(numbers)/len(numbers)
 
-# print average([1, 2, 3, 4, 5])
+print average([1, 2, 3, 4, 5])
 
 
-# def join_strings_with_comma(words):
-#     """Return ['list', 'of', 'words'] like "list, of, words".
+def join_strings_with_comma(words):
+    """Return ['list', 'of', 'words'] like "list, of, words".
 
-#     For example::
+    For example::
 
-#         >>> join_strings_with_comma(
-#         ...     ["Labrador", "Poodle", "French Bulldog"]
-#         ...     )
-#         'Labrador, Poodle, French Bulldog'
+        >>> join_strings_with_comma(
+        ...     ["Labrador", "Poodle", "French Bulldog"]
+        ...     )
+        'Labrador, Poodle, French Bulldog'
 
-#     If there's only one thing in the list, it should return just that
-#     thing, of course::
+    If there's only one thing in the list, it should return just that
+    thing, of course::
 
-#         >>> join_strings_with_comma(["Pretzel"])
-#         'Pretzel'
-#     """
+        >>> join_strings_with_comma(["Pretzel"])
+        'Pretzel'
+    """
 
-#     string = ""
-#     for word in words:
-#         string += word + ", "
+    string = ""
+    for word in words:
+        string += word + ", "
 
-#     return string
+    return string
 
-# print join_strings_with_comma(["spaniel", "terracotta", "emmanuel"])
+print join_strings_with_comma(["spaniel", "terracotta", "emmanuel"])
 
-# def reverse_list(items):
-#     """Return the input list, reversed.
+def reverse_list(items):
+    """Return the input list, reversed.
 
-#     **Do not use** the python function `reversed()` or the method
-#     `list.reverse()`.
+    **Do not use** the python function `reversed()` or the method
+    `list.reverse()`.
 
-#     For example::
+    For example::
 
-#         >>> reverse_list([1, 2, 3])
-#         [3, 2, 1]
+        >>> reverse_list([1, 2, 3])
+        [3, 2, 1]
 
-#         >>> reverse_list(["cookies", "love", "I"])
-#         ['I', 'love', 'cookies']
+        >>> reverse_list(["cookies", "love", "I"])
+        ['I', 'love', 'cookies']
 
-#     You should do this without changing the original list::
+    You should do this without changing the original list::
 
-#         >>> orig = ["apple", "berry", "cherry"]
-#         >>> reverse_list(orig)
-#         ['cherry', 'berry', 'apple']
-#         >>> orig
-#         ['apple', 'berry', 'cherry']
-#     """
+        >>> orig = ["apple", "berry", "cherry"]
+        >>> reverse_list(orig)
+        ['cherry', 'berry', 'apple']
+        >>> orig
+        ['apple', 'berry', 'cherry']
+    """
 
-#     reverse = []
-#     for item in range(0, len(items)):
-#         reverse.append(items[-1])
-#         del items[-1]
+    reverse = []
+    for item in range(0, len(items)):
+        reverse.append(items[-1])
+        del items[-1]
 
-#     return reverse
+    return reverse
 
-# print reverse_list(["elote", "carnivore", "scene"])
+print reverse_list(["elote", "carnivore", "scene"])
 
 
 # def reverse_list_in_place(items):
@@ -343,47 +343,47 @@ you run this file.
 # print reverse_list_in_place(["hair", "scare", "mare", "hare"])
 #                             # ["hare", "mare", "scare", "hair"]
 
-def duplicates(items):
-    """Return list of words from input list which were duplicates.
+# def duplicates(items):
+#     """Return list of words from input list which were duplicates.
 
-    Return a list of words which are duplicated in the input list.
-    The returned list should be in ascending order.
+#     Return a list of words which are duplicated in the input list.
+#     The returned list should be in ascending order.
 
-    For example::
+#     For example::
 
-        >>> duplicates(
-        ...     ["apple", "banana", "banana", "cherry", "apple"]
-        ... )
-        ['apple', 'banana']
+#         >>> duplicates(
+#         ...     ["apple", "banana", "banana", "cherry", "apple"]
+#         ... )
+#         ['apple', 'banana']
 
-        >>> duplicates([1, 2, 2, 4, 4, 4, 7])
-        [2, 4]
+#         >>> duplicates([1, 2, 2, 4, 4, 4, 7])
+#         [2, 4]
 
-    You should do this without changing the original list::
+#     You should do this without changing the original list::
 
-        >>> orig = ["apple", "apple", "berry"]
-        >>> duplicates(orig)
-        ['apple']
+#         >>> orig = ["apple", "apple", "berry"]
+#         >>> duplicates(orig)
+#         ['apple']
 
-        >>> orig
-        ['apple', 'apple', 'berry']
-    """
+#         >>> orig
+#         ['apple', 'apple', 'berry']
+#     """
 
-    field = []
-    for index, item in enumerate(items):
-        field.append(item)
-        items[0:1] = ""
-        # if field
-    # for j in range(0, len(items)):
-    #     if items[i] == items[j]:
-    #         dups.append(items[j])
-    #         del items[i]
-                # del items[j]
+#     field = []
+#     for index, item in enumerate(items):
+#         field.append(item)
+#         items[0:1] = ""
+#         # if field
+#     # for j in range(0, len(items)):
+#     #     if items[i] == items[j]:
+#     #         dups.append(items[j])
+#     #         del items[i]
+#                 # del items[j]
 
-    # return field
-    return items
+#     # return field
+#     return items
 
-print duplicates(["ginger", 1, "ginger", "taint", 12])
+# print duplicates(["ginger", 1, "ginger", "taint", 12])
 
 # def find_letter_indices(words, letter):
 #     """Return list of indices where letter appears in each word.
