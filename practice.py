@@ -431,11 +431,11 @@ print reverse_list(["elote", "carnivore", "scene"])
 # #####################################################################
 # # END OF PRACTICE: You can ignore everything below.
 
-# if __name__ == "__main__":
-#     import doctest
+if __name__ == "__main__":
+    import doctest
 
-#     print
-#     result = doctest.testmod()
-#     if not result.failed:
-#         print "ALL TESTS PASSED. GOOD WORK!"
-#     print
+    print
+    result = doctest.testmod()
+    if not result.failed:
+        print "ALL TESTS PASSED. GOOD WORK!"
+    print
